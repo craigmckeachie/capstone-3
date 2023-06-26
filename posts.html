@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/javascript/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="registration.html">Register</a>
+      <a href="posts.html">Posts</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <button id="logoutBtn" onclick="logout();">LogOut</button>
+    <div id="postsList"></div>
+    <script>
+      "use strict";
+
+      const postsList = document.querySelector("#postsList");
+      const loginData = getLoginData();
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${loginData.token}`,
+        },
+      };
+
+      fetch(apiBaseURL + "/api/posts", options)
+        .then((response) => response.json())
+        .then((list) => {
+          console.log(list);
+        });
+    </script>
+  </body>
+</html>
