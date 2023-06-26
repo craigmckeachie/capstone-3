@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/javascript/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home Login</a>
+      <a href="registration.html">Register</a>
+      <a href="posts.html">Posts</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <div id="post-messages"></div>
+
+    <script>
+      "use strict";
+      const apiBaseURL = "https://microbloglite.herokuapp.com";
+      fetch();
+    </script>
+  </body>
+</html>
