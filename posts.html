@@ -37,8 +37,8 @@
           for (const userPost of list) {
            let postItem = document.createElement("li");
             postItem.value = " ";
-            postItem.innerText = userPost.text;
-            postsList.appendChild(postItem)
+            postItem.innerText = `${userPost.username} : ${userPost.text} : ${userPost.createdAt}`;
+            postsList.appendChild(postItem);
           }
           console.log(list);
         });
