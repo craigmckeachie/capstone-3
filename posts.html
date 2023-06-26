@@ -17,7 +17,8 @@
       <a href="profile.html">Profile</a>
     </nav>
     <button id="logoutBtn" onclick="logout();">LogOut</button>
-    <div id="postsList"></div>
+    <div id="postsList">
+    </div>
     <script>
       "use strict";
 
@@ -33,6 +34,12 @@
       fetch(apiBaseURL + "/api/posts", options)
         .then((response) => response.json())
         .then((list) => {
+          for (const userPost of list) {
+           let postItem = document.createElement("li");
+            postItem.value = " ";
+            postItem.innerText = userPost.text;
+            postsList.appendChild(postItem)
+          }
           console.log(list);
         });
     </script>
