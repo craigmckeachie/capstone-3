@@ -31,17 +31,18 @@
       };
 
       function isAuthenticated() {
-        return sessionStorage.getItem("authenticationKey") === authKey;
+        return localStorage.getItem("authenticationKey") === authKey;
       }
 
       function storeAuthenticationKey() {
-        sessionStorage.setItem("authenticationKey", authKey);
+        localStorage.setItem("authenticationKey", authKey);
       }
-      if (isAuthenticated()) {
+
+
         fetch(apiBaseURL + "/api/posts")
           .then((response) => response.json())
-          .then((list) => console.log(list));
-      }
+          .then((list) =>  if (isAuthenticated()) {
+            console.log(list)});
     </script>
   </body>
 </html>
