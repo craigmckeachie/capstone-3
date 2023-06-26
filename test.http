@@ -19,10 +19,27 @@ Content-Type: application/json
 
 ### Step 3) GET Users
 GET https://microbloglite.herokuapp.com/api/users/?limit=10
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ1MTI3LCJleHAiOjE2ODc2MzE1Mjd9.6iBwHMaaKDd-hqDnzNdoGdUkUo67tsqpdSXqonIg4-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ0NjMyLCJleHAiOjE2ODc2MzEwMzJ9.Coj0e5_Ryf2Kp1xIrpRVJctGMCGyBGyaBHbR6rFevYI
 
 ### Step 4) Add Post
+POST https://microbloglite.herokuapp.com/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ0NjMyLCJleHAiOjE2ODc2MzEwMzJ9.Coj0e5_Ryf2Kp1xIrpRVJctGMCGyBGyaBHbR6rFevYI
+
+{
+    "text": "Trying out life."
+}
 
 ### Step 5) GET Posts
+GET https://microbloglite.herokuapp.com/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ0NjMyLCJleHAiOjE2ODc2MzEwMzJ9.Coj0e5_Ryf2Kp1xIrpRVJctGMCGyBGyaBHbR6rFevYI
+
+{
+    "postId": "6483f43e66aba09b55164d7d"
+}
 
 ### Step 6) DELETE Post
+DELETE https://microbloglite.herokuapp.com/api/posts 
+Content-Type: application/json
+Authorization:  Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ0NjMyLCJleHAiOjE2ODc2MzEwMzJ9.Coj0e5_Ryf2Kp1xIrpRVJctGMCGyBGyaBHbR6rFevYI
