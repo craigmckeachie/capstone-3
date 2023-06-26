@@ -23,26 +23,18 @@
 
       const postsList = document.querySelector("#postsList");
       const loginData = getLoginData();
-      const authKey = {
+      const options = {
         method: "GET",
         headers: {
           Authorization: `Bearer ${loginData.token}`,
         },
       };
 
-      function isAuthenticated() {
-        return localStorage.getItem("authenticationKey") === authKey;
-      }
-
-      function storeAuthenticationKey() {
-        localStorage.setItem("authenticationKey", authKey);
-      }
-
-
-        fetch(apiBaseURL + "/api/posts")
-          .then((response) => response.json())
-          .then((list) =>  if (isAuthenticated()) {
-            console.log(list)});
+      fetch(apiBaseURL + "/api/posts", options)
+        .then((response) => response.json())
+        .then((list) => {
+          console.log(list);
+        });
     </script>
   </body>
 </html>
