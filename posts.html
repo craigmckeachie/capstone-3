@@ -16,11 +16,32 @@
       <a href="posts.html">Posts</a>
       <a href="profile.html">Profile</a>
     </nav>
-   <button id="logoutBtn" onclick="logout();">LogOut</button>
+    <button id="logoutBtn" onclick="logout();">LogOut</button>
+    <div id="postsList"></div>
     <script>
       "use strict";
-      const apiBaseURL = "https://microbloglite.herokuapp.com";
-      fetch();
+
+      const postsList = document.querySelector("#postsList");
+      const loginData = getLoginData();
+      const authKey = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${loginData.token}`,
+        },
+      };
+
+      function isAuthenticated() {
+        return sessionStorage.getItem("authenticationKey") === authKey;
+      }
+
+      function storeAuthenticationKey() {
+        sessionStorage.setItem("authenticationKey", authKey);
+      }
+      if (isAuthenticated()) {
+        fetch(apiBaseURL + "/api/posts")
+          .then((response) => response.json())
+          .then((list) => console.log(list));
+      }
     </script>
   </body>
 </html>
