@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "username": "jtranuserstuff",
-  "fullName": "Jon Tran",
+  "fullName": "",
   "password": "notmypassword1"
 }
 
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ### Step 3) GET Users
 GET https://microbloglite.herokuapp.com/api/users/?limit=10
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3NTQ0NjMyLCJleHAiOjE2ODc2MzEwMzJ9.Coj0e5_Ryf2Kp1xIrpRVJctGMCGyBGyaBHbR6rFevYI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp0cmFudXNlcnN0dWZmIiwiaWF0IjoxNjg3ODkyMDIzLCJleHAiOjE2ODc5Nzg0MjN9.bBK8nCb_Al0G_BbqnpKdotv_cZlScxx3tnYL5GS4PCU
 
 ### Step 4) Add Post
 POST https://microbloglite.herokuapp.com/api/posts
