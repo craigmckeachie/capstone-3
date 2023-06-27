@@ -4,65 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form </title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.7/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="css/regi.css">
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <a href="index.html">Home</a>
         <a href="registration.html">Register</a>
         <a href="posts.html">Posts</a>
         <a href="profile.html">Profile</a>
-    </nav>
-    <!-- <button type="text"></button> -->
+    </nav> -->
    <div class="container">
     <div class="header">
         <h2> Registration Form </h2>
-        
     </div>
 
     <form action="" class="form" id="form">
-        <div class="form control">
+        <div class="form-control">
             <label> First Name</label>
             <input type="text" name="" id="username" placeholder="Enter Your First Name" autocomplete="off">
-           <!-- <i class="fas-fa-check-circle"></i>
+           <i class="fas-fa-check-circle"></i>
            <i class="fas-fa-exclamation-circle"></i>
-           <small>Error Message</small> -->
+           <small>Error Message</small>
         </div>
 
-        <div class="form control">
+        <div class="form-control">
             <label> Last Name</label>
             <input type="text" name="" id="lastname" placeholder="Enter Your Last Name" autocomplete="off">
-            <!-- <i class="fas-fa-check-circle"></i>
+            <i class="fas-fa-check-circle"></i>
             <i class="fas-fa-exclamation-circle"></i>
-            <small>Error Message</small> -->
+            <small>Error Message</small>
         </div>
 
-        <div class="form control">
+        <div class="form-control">
             <label> Email</label>
             <input type="text" name="" id="email" placeholder="Enter Your Email" autocomplete="off">
-            <!-- <i class="fas-fa-check-circle"></i>
+            <i class="fas-fa-check-circle"></i>
             <i class="fas-fa-exclamation-circle"></i>
-            <small>Error Message</small> -->
+            <small>Error Message</small>
         </div>
 
-        <div class="form control">
+        <div class="form-control">
             <label>Password</label>
             <input type="password" name="" id="password" placeholder="Enter Your Password" autocomplete="off">
-            <!-- <i class="fas-fa-check-circle"></i>
+            <i class="fas-fa-check-circle"></i>
             <i class="fas-fa-exclamation-circle"></i>
-            <small>Error Message</small> -->
+            <small>Error Message</small>
         </div>
 
-        <div class="form control">
+        <div class="form-control">
             <label> Confirm Password</label>
             <input type="password" name="" id="cpassword" placeholder="Confirm Password" autocomplete="off">
-            <!-- <i class="fas-fa-check-circle"></i>
+            <i class="fas-fa-check-circle"></i>
             <i class="fas-fa-exclamation-circle"></i>
-            <small>Error Message</small> -->
+            <small>Error Message</small>
         </div>
         <input type="submit" value="Submit" class="btn">
        </form>
     </div>
-<script src="scripts/registration.js"></script>
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="javascript/registration.js"></script>
 </body>
 </html>
