@@ -17,8 +17,7 @@
       <a href="profile.html">Profile</a>
     </nav>
     <button id="logoutBtn" onclick="logout();">LogOut</button>
-    <div id="postsList">
-    </div>
+    <div id="postsList" style="border: thick black"></div>
     <script>
       "use strict";
 
@@ -35,12 +34,14 @@
         .then((response) => response.json())
         .then((list) => {
           for (const userPost of list) {
-           let postItem = document.createElement("li");
-            postItem.value = " ";
-            postItem.innerText = `${userPost.username} : ${userPost.text} : ${userPost.createdAt}`;
-            postsList.appendChild(postItem);
+            let postItem = document.createElement("div");
+            postItem.id = "postItem";
+            postItem.innerText = `${userPost.username} : ${userPost.text}`;
+            let timePosted = document.createElement("div");
+            timePosted.id = "timePosted";
+            timePosted.innerText = `${userPost.createdAt}`;
+            postsList.append(postItem, timePosted);
           }
-          console.log(list);
         });
     </script>
   </body>
